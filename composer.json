@@ -1,0 +1,38 @@
+{
+  "name": "resoul/http-rest-api",
+  "description": "http rest api",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "version": "0.1",
+  "authors": [
+    {
+      "name": "resoul",
+      "email": "resoul.ua@icloud.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "~2.0.49.3",
+    "ramsey/uuid": "~4.2.3",
+    "yiisoft/yii2-symfonymailer": "~3.0.0",
+    "yiisoft/yii2-queue": "^2.3.6",
+    "firebase/php-jwt": "^6.10",
+    "paragonie/sodium_compat": "^1.20",
+    "guzzlehttp/guzzle": "^7.8",
+    "ext-libxml": "*",
+    "ext-dom": "*"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "config": {
+    "platform": {
+      "php": "8.2"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true
+    }
+  }
+}
