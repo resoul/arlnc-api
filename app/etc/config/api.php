@@ -7,14 +7,21 @@ use yii\log\FileTarget;
 use yii\web\JsonParser;
 use yii\web\Response;
 use yii\web\UrlManager;
+use Airlance\Media\Media;
 use Airlance\Theme\Theme;
 
 $env = require(ENV_PATH);
 $config = require(COMMON_CONFIG_PATH);
 
-$config['modules']['theme'] = [
-    'class' => Theme::class,
-    'controllerNamespace' => 'Airlance\Theme\Controller\Rest'
+$config['modules'] = [
+    'theme' => [
+        'class' => Theme::class,
+        'controllerNamespace' => 'Airlance\Theme\Controller\Rest'
+    ],
+    'media' => [
+        'class' => Media::class,
+        'controllerNamespace' => 'Airlance\Media\Controller\Rest'
+    ]
 ];
 $config['components']['request'] = [
     'baseUrl' => '',
@@ -43,7 +50,9 @@ $config['components']['urlManager'] = [
     'enablePrettyUrl' => true,
     'showScriptName' => false,
     'rules' => [
-        '' => 'theme/updates/get-version'
+        '' => 'theme/updates/get-version',
+        'media/movie/<slug>' => 'media/movie/movie',
+        'media/movie/<slug>/<slug2>/<slug3>' => 'media/movie/series'
     ]
 ];
 $config['components']['log'] = [
