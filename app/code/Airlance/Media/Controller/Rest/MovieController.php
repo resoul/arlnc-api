@@ -28,12 +28,12 @@ class MovieController extends Controller
         if (!is_dir("$mediaFolder/$slug/$slug2")) {
             throw new NotFoundHttpException('The requested movie series does not exist.');
         }
-        if (!file_exists("$mediaFolder/$slug/$slug2/$slug3")) {
+        if (!file_exists("$mediaFolder/$slug/$slug2/$slug3.mp4")) {
             throw new NotFoundHttpException('The requested video file does not exist.');
         }
 
         return $this->response->sendFile(
-            "$mediaFolder/$slug/$slug2/$slug3",
+            "$mediaFolder/$slug/$slug2/$slug3.mp4",
             $slug3,
             ['inline' => true, 'mimeType' => 'video/mp4']
         );
