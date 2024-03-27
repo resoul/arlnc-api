@@ -51,6 +51,7 @@ $config['components']['urlManager'] = [
     'showScriptName' => false,
     'rules' => [
         '' => 'theme/updates/get-version',
+        'media/image/<user_id>/<folder_id>/<file>' => 'media/image/view',
         'media/movie/<slug>' => 'media/movie/movie',
         'media/movie/<slug>/<slug2>/<slug3>' => 'media/movie/series'
     ]
