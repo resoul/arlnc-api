@@ -29,16 +29,19 @@ class StoriesController extends Controller
                     [
                         'mimeType' => 'video',
                         'path' => '/246296107/4335712153130804/6368178735875283046_n.mp4',
+                        'duration' => 5.367,
                         'lastUpdated' => '14m',
                     ],
                     [
                         'mimeType' => 'video',
                         'path' => '/246296107/4335712153130804/7558656618610710209_n.mp4',
+                        'duration' => 10.376548752834466,
                         'lastUpdated' => '14m',
                     ],
                     [
                         'mimeType' => 'image',
                         'path' => '/246296107/4335712153130804/7810105988318989189_n.jpg',
+                        'duration' => 5,
                         'lastUpdated' => '14m',
                     ],
                 ]
@@ -61,16 +64,19 @@ class StoriesController extends Controller
                         [
                             'mimeType' => 'image',
                             'path' => '/246296107/4335712153130804/828976705172228782_n.jpg',
+                            'duration' => 5,
                             'lastUpdated' => '14m',
                         ],
                         [
                             'mimeType' => 'image',
                             'path' => '/246296107/4335712153130804/1728455242631446903_n.jpg',
+                            'duration' => 5,
                             'lastUpdated' => '14m',
                         ],
                         [
                             'mimeType' => 'image',
                             'path' => '/246296107/4335712153130804/1240845163032602559_n.jpg',
+                            'duration' => 5,
                             'lastUpdated' => '14m',
                         ],
                     ]
@@ -92,6 +98,7 @@ class StoriesController extends Controller
                         [
                             'mimeType' => 'image',
                             'path' => '/246296107/4335712153130804/2075994038980486116_n.jpg',
+                            'duration' => 5,
                             'lastUpdated' => '14m',
                         ]
                     ]
@@ -113,16 +120,19 @@ class StoriesController extends Controller
                         [
                             'mimeType' => 'video',
                             'path' => '/246296107/4335712153130804/2326865499224532597_n.mp4',
+                            'duration' => 4.269548752834467,
                             'lastUpdated' => '14m',
                         ],
                         [
                             'mimeType' => 'image',
                             'path' => '/246296107/4335712153130804/3557483292759278855_n.jpg',
+                            'duration' => 5,
                             'lastUpdated' => '14m',
                         ],
                         [
                             'mimeType' => 'image',
                             'path' => '/246296107/4335712153130804/5760022998253460604_n.jpg',
+                            'duration' => 5,
                             'lastUpdated' => '14m',
                         ],
                     ]
