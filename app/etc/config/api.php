@@ -7,6 +7,7 @@ use yii\log\FileTarget;
 use yii\web\JsonParser;
 use yii\web\Response;
 use yii\web\UrlManager;
+use Airlance\Account\Account;
 use Airlance\Media\Media;
 use Airlance\Theme\Theme;
 
@@ -14,6 +15,10 @@ $env = require(ENV_PATH);
 $config = require(COMMON_CONFIG_PATH);
 
 $config['modules'] = [
+    'account' => [
+        'class' => Account::class,
+        'controllerNamespace' => 'Airlance\Account\Controller\Rest'
+    ],
     'theme' => [
         'class' => Theme::class,
         'controllerNamespace' => 'Airlance\Theme\Controller\Rest'
