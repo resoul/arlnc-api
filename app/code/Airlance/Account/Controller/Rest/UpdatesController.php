@@ -9,7 +9,7 @@ class UpdatesController extends Controller
 {
     public function actionNotification(): Response
     {
-        Yii::error(Yii::$app->response);
+        Yii::error(Yii::$app->request);
         return $this->asJson(['success' => true]);
     }
 }
