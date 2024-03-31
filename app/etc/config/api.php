@@ -58,7 +58,11 @@ $config['components']['urlManager'] = [
         '' => 'theme/updates/get-version',
         'media/image/<user_id>/<folder_id>/<file>' => 'media/image/view',
         'media/movie/<slug>' => 'media/movie/movie',
-        'media/movie/<slug>/<slug2>/<slug3>' => 'media/movie/series'
+        'media/movie/<slug>/<slug2>/<slug3>' => 'media/movie/series',
+        '<_m:[\w\-]+>/<_c:[\w\-]+>' => '<_m>/<_c>/index',
+        '<_m:[\w\-]+>/<_c:[\w\-]+>/<id:\d+>' => '<_m>/<_c>/view',
+        '<_m:[\w\-]+>/<_c:[\w\-]+>/<id:\d+>/<_a:[\w\-]+>' => '<_m>/<_c>/<_a>',
+        '<_m:[\w\-]+>/<_c:[\w\-]+>/<_a:[\w-]+>' => '<_m>/<_c>/<_a>',
     ]
 ];
 $config['components']['log'] = [
