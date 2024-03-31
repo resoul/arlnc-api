@@ -3,9 +3,7 @@ namespace Airlance\Account\Controller\Rest;
 
 use Firebase\JWT\JWK;
 use Firebase\JWT\JWT;
-use Firebase\JWT\Key;
 use Middleware\Framework\Rest\Controller;
-use yii\base\Exception;
 use yii\helpers\Json;
 use yii\web\Response;
 use Yii;
@@ -31,6 +29,7 @@ class ValidateController extends Controller
                 'auth_time' => $decodedToken->auth_time,
                 'email_verified' => $decodedToken->email_verified,
             ];
+            Yii::warning($success);
             $data['success'] = true;
         }
 
