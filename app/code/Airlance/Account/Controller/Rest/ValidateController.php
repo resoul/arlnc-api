@@ -12,7 +12,7 @@ class ValidateController extends Controller
 {
     public function actionToken(): Response
     {
-        $data['success'] = false;
+        $data = [];
         if (($idToken = Yii::$app->request->post('token')) && $ID = Yii::$app->params['apple.client.id']) {
             $keys = file_get_contents('https://appleid.apple.com/auth/keys');
             $keys = Json::decode($keys);
@@ -30,7 +30,17 @@ class ValidateController extends Controller
                 'email_verified' => $decodedToken->email_verified,
             ];
             Yii::warning($success);
-            $data['success'] = true;
+            $data = [
+                'uuid' => '246296108',
+                'username' => 'resoul.ua',
+                'fullName' => 'YM',
+                'profilePicture' => '/246296107/4335712153130804/4549742191903244288_n.jpg',
+                'isPrivate' => false,
+                'biography' => 'Explore',
+                'media' => 0,
+                'followers' => 0,
+                'following' => 0
+            ];
         }
 
         return $this->asJson($data);
