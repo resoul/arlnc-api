@@ -13,11 +13,14 @@ class ValidateController extends Controller
     public function actionToken(): Response
     {
         $data = [];
-        if (($idToken = Yii::$app->request->post('token')) && $ID = Yii::$app->params['apple.client.id']) {
+        if (($idToken = Yii::$app->request->post('token'))) {
             $keys = file_get_contents('https://appleid.apple.com/auth/keys');
             $keys = Json::decode($keys);
             $decodedToken = JWT::decode($idToken, JWK::parseKeySet($keys));
-            if ($decodedToken->iss !== 'https://appleid.apple.com' || $decodedToken->aud !== $ID) {
+            if (
+                $decodedToken->iss !== 'https://appleid.apple.com' ||
+                !in_array($decodedToken->aud, Yii::$app->params['apple.client.id'])
+            ) {
                 $data['msg'] = 'Invalid issuer or audience';
             }
 
