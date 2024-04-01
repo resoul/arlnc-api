@@ -19,7 +19,8 @@ $config['modules'] = [
 $config['controllerMap']['migrate'] = [
     'class' => MigrateController::class,
     'migrationNamespaces' => [
-        'Middleware\Framework\Queue\Migration'
+        'Middleware\Framework\Queue\Migration',
+        'Airlance\Account\Migration',
     ]
 ];
 $config['components']['log'] = [

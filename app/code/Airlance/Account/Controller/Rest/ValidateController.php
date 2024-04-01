@@ -22,12 +22,12 @@ class ValidateController extends Controller
             }
 
             $success = [
-                'iss' => $decodedToken->iss,
-                'aud' => $decodedToken->aud,
-                'sub' => $decodedToken->sub,
-                'email' => $decodedToken->email,
-                'auth_time' => $decodedToken->auth_time,
-                'email_verified' => $decodedToken->email_verified,
+                'iss' => $decodedToken->iss ?? '',
+                'aud' => $decodedToken->aud ?? '',
+                'sub' => $decodedToken->sub ?? '',
+                'email' => $decodedToken->email ?? '',
+                'auth_time' => $decodedToken->auth_time ?? '',
+                'email_verified' => $decodedToken->email_verified ?? '',
             ];
             Yii::warning($success);
             $data = [
