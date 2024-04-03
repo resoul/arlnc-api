@@ -5,7 +5,7 @@ use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\db\ActiveQuery;
 
-class Token extends ActiveRecord
+class Profile extends ActiveRecord
 {
     public function behaviors(): array
     {
@@ -16,11 +16,6 @@ class Token extends ActiveRecord
 
     public static function tableName(): string
     {
-        return "{{%account_token}}";
-    }
-
-    public function getAccount(): ActiveQuery
-    {
-        return $this->hasOne(Account::class, ['id' => 'account_id']);
+        return "{{%account_profile}}";
     }
 }

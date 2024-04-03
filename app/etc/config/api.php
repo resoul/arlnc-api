@@ -8,8 +8,10 @@ use yii\web\JsonParser;
 use yii\web\Response;
 use yii\web\UrlManager;
 use Airlance\Account\Account;
+use Airlance\Account\Model\Account as AccountModel;
 use Airlance\Media\Media;
 use Airlance\Theme\Theme;
+use yii\web\User;
 
 $env = require(ENV_PATH);
 $config = require(COMMON_CONFIG_PATH);
@@ -27,6 +29,11 @@ $config['modules'] = [
         'class' => Media::class,
         'controllerNamespace' => 'Airlance\Media\Controller\Rest'
     ]
+];
+$config['components']['user'] = [
+    'class' => User::class,
+    'enableSession' => false,
+    'identityClass' => AccountModel::class
 ];
 $config['components']['request'] = [
     'baseUrl' => '',
