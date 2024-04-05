@@ -37,8 +37,8 @@ class UserController extends Controller
     public function actionCreate(): Response
     {
         $model = new Create;
-        if ($model->load(Yii::$app->request->post(), '') && $model->create()) {
-            return $this->asJson(['token' => $model->token]);
+        if ($model->load(Yii::$app->request->post(), '') && $model->validate()) {
+            return $this->asJson($model->create());
         }
 
         throw new NotFoundHttpException($model->getFirstError('token'));
