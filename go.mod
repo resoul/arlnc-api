@@ -1,4 +1,4 @@
-module simple-go-server
+module airlance-server
 
 go 1.23.4
 
